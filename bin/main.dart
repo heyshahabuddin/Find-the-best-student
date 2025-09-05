@@ -7,6 +7,7 @@ void main(List<String> arguments) {
   print("Please enter the number of marks:");
   rangelimit = int.parse(stdin.readLineSync()!);
 
+  print("Please enter the marks:");
   for( int markIndex = 0; markIndex < rangelimit; markIndex++){
     print("Mark $markIndex:");
     int mark = int.parse(stdin.readLineSync()!);
