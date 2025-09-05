@@ -4,16 +4,15 @@ List findMax(List<int> studentMarks) {
   int markIndex = 0;
 
   for(int markLoop = 1; markLoop < studentMarks.length; markLoop++){
-    if(studentMarks[markLoop] >= maxMark){
+    if(studentMarks[markLoop] > maxMark){
       maxMark = studentMarks[markLoop];
-      markIndex = markLoop + 1;
-    } else{
-      maxMark = maxMark;
-      markIndex = markLoop + 1;
+      markIndex = markLoop;
     }
   }
 
+  markIndex = markIndex + 1;
   returnValue.add(markIndex);
+
   returnValue.add(maxMark);
   return returnValue;
 }
