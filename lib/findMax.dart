@@ -1,12 +1,19 @@
-int findMax(List<int> studentMarks) {
+List findMax(List<int> studentMarks) {
   int maxMark = studentMarks[0];
   List<dynamic> returnValue = [];
-  for(int mark = 1; mark < studentMarks.length; mark++){
-    if(studentMarks[mark] >= maxMark){
-      maxMark = studentMarks[mark];
+  int markIndex = 0;
+
+  for(int markLoop = 1; markLoop < studentMarks.length; markLoop++){
+    if(studentMarks[markLoop] >= maxMark){
+      maxMark = studentMarks[markLoop];
+      markIndex = markLoop + 1;
     } else{
       maxMark = maxMark;
+      markIndex = markLoop + 1;
     }
   }
-  return maxMark;
+
+  returnValue.add(markIndex);
+  returnValue.add(maxMark);
+  return returnValue;
 }

@@ -15,6 +15,7 @@ void main(List<String> arguments) {
   print(marks);
 
   // user defined function -findMax
-  int maxMark = findMax(marks);
-  print('The best student is : $maxMark');
+  List maxMarkData = findMax(marks);
+  //print(maxMarkData);
+  print('The best student: Student Id is ${maxMarkData[0]} and Mark is ${maxMarkData[1]}');
 }
